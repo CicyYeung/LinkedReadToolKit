@@ -55,7 +55,7 @@ example
 ```
 
 # Running examples
-## function 1: format conversion across diverse linked-read data format
+## function 1: format conversion across diverse linked-read data formats
 ```
 LRTK FQCONVER -I1 NA12878_1.fastq -I2 NA12878_2.fastq -IT stLFR -O1 outFQ1 -O2 outFQ2 -OT ULRF -B BLstLFR -T 4 
 ```
@@ -63,11 +63,11 @@ LRTK FQCONVER -I1 NA12878_1.fastq -I2 NA12878_2.fastq -IT stLFR -O1 outFQ1 -O2 o
 ```
 LRTK ALIGN -BQ1 barcodedstLFRFQ1 -BQ2 barcodedstLFRFQ2 -FQ1 nobarcodedstLFRFQ1 -FQ2 nobarcodedstLFRFQ2 -R GRCH38.fa -O NA12878.bam -RG "@RG\tID:NA12878\tSM:NA12878" -P stLFR -T 4
 ```
-## function 3: variation calling
+## function 3: small variation calling
 ```
 LRTK SNV -B NA12878.bam -R GRCH38 -A "SAMTOOLS" -T 4 -O NA12878.SNV.vcf
 ```
-## function 4: variation calling
+## function 4: large variation calling
 ```
 LRTK SV -B NA12878.bam -R GRCH38 -A "Aquila" -T 4 -O NA12878.SV.vcf -V NA12878.SNV.raw.vcf -U path_to_UNIQNESS_database
 ```
