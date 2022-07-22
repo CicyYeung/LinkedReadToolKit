@@ -23,7 +23,7 @@ conda install -c bioconda samtools
 ```
 Some optional tools, such as LinkedSV, Valor and SpecHap, need to be installed from source codes and added into the PATH environment variable.
 
-## Example data in Zenodo
+## example data in Zenodo
 Please download the default database from Zenodo.
 The database directory should be organized as:
 ```
@@ -55,21 +55,29 @@ example
 ```
 
 # Running examples
-## module1: format conversion across diverse linked-read data format
+## function 1: format conversion across diverse linked-read data format
 ```
 LRTK FQCONVER -I1 NA12878_1.fastq -I2 NA12878_2.fastq -IT stLFR -O1 outFQ1 -O2 outFQ2 -OT ULRF -B BLstLFR -T 4 
 ```
-## module2: unified barcode-aware alignment
+## function 2: unified barcode-aware alignment
 ```
 LRTK ALIGN -BQ1 barcodedstLFRFQ1 -BQ2 barcodedstLFRFQ2 -FQ1 nobarcodedstLFRFQ1 -FQ2 nobarcodedstLFRFQ2 -R GRCH38.fa -O NA12878.bam -RG "@RG\tID:NA12878\tSM:NA12878" -P stLFR -T 4
 ```
-## module3: variation calling and phasing
+## function 3: variation calling
 ```
-LRTK SNV -B NA12878.bam -R GRCH38 -A SAMTOOLS -T 4 -O NA12878.vcf
+LRTK SNV -B NA12878.bam -R GRCH38 -A "SAMTOOLS" -T 4 -O NA12878.SNV.vcf
 ```
-## module4: automatic pipeline to process multiple samples
+## function 4: variation calling
 ```
-LRTK WGS -SI SAMPLE_INFO -OD OUTDIR -DB DATABASE -T 4
+LRTK SV -B NA12878.bam -R GRCH38 -A "Aquila" -T 4 -O NA12878.SV.vcf -V NA12878.SNV.raw.vcf -U path_to_UNIQNESS_database
+```
+## function 5: variation phasing
+```
+LRTK PHASE -B NA12878.bam -R GRCH38 -A "HapCUT2" -T 12 -V NA12878.SNV.vcf -O NA12878.SNV.phased.vcf
+```
+## function 6: automatic pipeline to process multiple samples
+```
+LRTK WGS -SI path_to_sample_info -OD path_to_outdir -DB path_to_database -RG "@RG\tID:NA12878\tSM:NA12878" -T 32
 ```
 # Troubleshooting
 Please submit issues on the github page for LRTK.
