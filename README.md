@@ -22,9 +22,15 @@ conda install -c bioconda hapcut2
 conda install -c bioconda samtools
 ```
 If you would like to try the optional tools, such as LinkedSV, Valor, WhatSHAP, please make sure the program executables has been in one of the directories listed in the PATH environment variable (".bashrc").
+## Example data in Zenodo
+Please download the default database from Zenodo.
+
+
 
 
 In addition, the reference GRCH38 genome and related files can be found on the website: 
+
+
 # Running examples
 ## module1: format conversion across diverse linked-read data format
 ```
