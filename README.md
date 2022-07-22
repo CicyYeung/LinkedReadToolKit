@@ -1,7 +1,6 @@
 # LRTK: a unified ToolKit for Linked-Read sequencing data
 # Overview
- LRTK consist of 4 sections: format conversion of FASTQ files, barcode-aware read alignment, quality control and downstream analysis modules. It can accept multiple linked-read format, including sequencing data from 10x genomics, stLFR, and TELL-Seq technologies. In the downstream analysis section, LRTK includes a variety of tools to the detect and phase multiple variations, such as SNPs, INDELs, and SVs.
- 
+ LRTK is an easy-to-use tool kit to handle different linked-read sequencing data. It consist of multiple sections: format conversion of FASTQ files, barcode-aware read alignment, quality control and downstream analysis modules (SNP/INDEL/SV calling and phasing). It can accept multiple linked-read format, including sequencing data from 10x genomics, stLFR, and TELL-Seq technologies. 
 ![Main](https://user-images.githubusercontent.com/3699571/163749053-543ed7df-fb8f-4aa7-8c7e-3615b756e759.gif)
 # Install through Bioconda
 ## bioconda install
