@@ -79,5 +79,7 @@ LRTK PHASE -B NA12878.bam -R GRCH38 -A "HapCUT2" -T 12 -V NA12878.SNV.vcf -O NA1
 ```
 LRTK WGS -SI path_to_sample_info -OD path_to_outdir -DB path_to_database -RG "@RG\tID:NA12878\tSM:NA12878" -T 32
 ```
+# Output files:
+
 # Troubleshooting
 Please submit issues on the github page for LRTK.
