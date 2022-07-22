@@ -24,12 +24,34 @@ conda install -c bioconda samtools
 If you would like to try the optional tools, such as LinkedSV, Valor, WhatSHAP, please make sure the program executables has been in one of the directories listed in the PATH environment variable (".bashrc").
 ## Example data in Zenodo
 Please download the default database from Zenodo.
-
-
-
-
-In addition, the reference GRCH38 genome and related files can be found on the website: 
-
+The database directory should be organized as:
+```
+database
+|-GRCH38
+|-sonic
+|-WhiteList
+|-Uniqness_map
+```
+In addition, we provide multiple example linked-read sequencing data to run LRTK. We have included the small data sets (FQs) in github and stored the large data sets on Zenodo to generate the HTML report. 
+```
+example
+|-FQs/
+    |-Example.10x.R1.fq
+    |-Example.10x.R2.fq
+    |-Example.stLFR.R1.fq
+    |-Example.stLFR.R2.fq
+    |-Example.TELLSeq.index.fq
+    |-Example.TELLSeq.R1.fq
+    |-Example.TELLSeq.R2.fq
+|-LargeFQs
+    |-Example.10x.R1.fq
+    |-Example.10x.R2.fq
+    |-Example.stLFR.R1.fq
+    |-Example.stLFR.R2.fq
+    |-Example.TELLSeq.index.fq
+    |-Example.TELLSeq.R1.fq
+    |-Example.TELLSeq.R2.fq
+```
 
 # Running examples
 ## module1: format conversion across diverse linked-read data format
