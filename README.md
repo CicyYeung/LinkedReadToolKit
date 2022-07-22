@@ -21,7 +21,8 @@ conda install -c bioconda freebayes
 conda install -c bioconda hapcut2
 conda install -c bioconda samtools
 ```
-If you would like to try the optional tools, such as LinkedSV, Valor, WhatSHAP, please make sure the program executables has been in one of the directories listed in the PATH environment variable (".bashrc").
+Some optional tools, such as LinkedSV, Valor and SpecHap, need to be installed from source codes and added into the PATH environment variable.
+
 ## Example data in Zenodo
 Please download the default database from Zenodo.
 The database directory should be organized as:
